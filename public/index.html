@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style.css" >
+  </head>
+
+  <body>
+    <h1>💰 Budget Tracker (TypeScript)</h1>
+
+    <!-- Saving target -->
+    <label>
+      Saving Target (💸):
+      <input type="number" id="targetInput" min="0" placeholder="e.g. 5000" />
+    </label>
+    <span id="targetStatus" class="warning">No target set</span>
+
+    <!-- Income form -->
+    <h2>Add Income</h2>
+    <form id="incomeForm">
+      <input id="incSource"  type="text"   placeholder="Source" required />
+      <input id="incAmount"  type="number" placeholder="Amount" required min="0" step=".01" />
+      <input id="incDate"    type="date"   required />
+      <button type="submit">Add</button>
+    </form>
+
+    <!-- Income list -->
+    <table id="incomeTable">
+      <thead><tr><th>Source</th><th>Amount</th><th>Date</th></tr></thead>
+      <tbody></tbody>
+      <tfoot><tr><td>Total</td><td id="incomeTotal">0</td><td></td></tr></tfoot>
+    </table>
+
+    <!-- Expense form -->
+    <h2>Add Expense</h2>
+    <form id="expenseForm">
+      <input id="expSource"  type="text"   placeholder="Source" required />
+      <input id="expAmount"  type="number" placeholder="Amount" required min="0" step=".01" />
+      <input id="expDate"    type="date"   required />
+      <button type="submit">Add</button>
+    </form>
+
+    <!-- Expense list -->
+    <table id="expenseTable">
+      <thead><tr><th>Source</th><th>Amount</th><th>Date</th></tr></thead>
+      <tbody></tbody>
+      <tfoot><tr><td>Total</td><td id="expenseTotal">0</td><td></td></tr></tfoot>
+    </table>
+
+    <!-- Totals -->
+    <div class="totals">
+      <div>Balance: <span id="balance">0</span></div>
+    </div>
+
+    <script type="module" src="./build/index.js"></script>
+
+  </body>
+</html>

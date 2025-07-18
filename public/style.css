@@ -1,0 +1,46 @@
+* {
+     box-sizing: border-box;
+      font-family: system-ui, sans-serif;
+}
+
+body {
+     margin: 0;
+      padding: 2rem;
+       max-width: 900px; 
+       margin-inline: auto;
+}
+
+h2 { 
+    margin-top: 3rem;
+ }
+
+form { 
+    display: grid;
+     grid-template-columns: 1fr 1fr 1fr auto;
+      gap: .5rem;
+    margin-bottom: 1rem; 
+}
+table { 
+    width: 100%; 
+    border-collapse: collapse;
+     margin-bottom: 2rem; 
+    }
+th, td {
+     border: 1px solid #ccc; 
+     padding: .4rem;
+      text-align: left; 
+    }
+tfoot td { 
+    font-weight: 700;
+ }
+.totals { display: flex;
+     gap: 2rem; 
+     font-size: 1.1rem; 
+     font-weight: 600;
+     }
+.success { 
+    color: forestgreen;
+ }
+.warning { 
+    color: orangered;
+ }
